@@ -1,0 +1,57 @@
+---
+title: HistoDev
+layout: 'base.njk'
+---
+
+
+
+
+    <section class="section__hero">
+        <div class="container">
+            <h1 class="section__hero-heading">The HistoDev Blog</h1>
+        </div>
+    </section>
+
+
+    <section class="section__featuredArticle">
+
+        <div class="container">
+
+             {%- for post in collections.featured -%}
+               <div class="featuredArticle__content">
+                <h3 class="featuredArticle__content-title">{{ post.data.title }}</h3>
+
+                <p class="featuredArticle__content-time">{{post.data.date | postDate }}</p>
+
+                <p class="featuredArticle__content-excerpt">{{ post.data.description }}</p>
+                <button class="featuredArticle__content-button"><a href="{{ post.url }}">Read
+                        More</a></button>
+             </div>
+                <img class="featuredArticle__featuredImg" src="{{ post.data.image }}" alt="featured image">
+             {%- endfor -%}
+            
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <section class="section__articles" id="blogs">
+        <div class="container">
+
+            {%- for post in collections.post -%}
+                {% include 'article-snippet.njk' %}
+             {%- endfor -%}
+
+            
+        </div>
+    </section>
+
+
+
+

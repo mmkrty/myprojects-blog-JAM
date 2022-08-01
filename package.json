@@ -1,0 +1,27 @@
+{
+  "name": "blogjam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "watch:sass": "sass --watch src/sass/main.scss src/css/style.css",
+    "compile:sass": "sass src/sass/main.scss:src/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last versions\" src/css/style.comp.css -o src/css/style.prefix.css",
+    "compress:css": "sass src/css/style.prefix.css:src/css/style.css --style compressed"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "concat": "^1.0.3",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0",
+    "sass": "^1.54.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1"
+  }
+}

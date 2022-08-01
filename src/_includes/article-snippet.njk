@@ -1,0 +1,8 @@
+<article class="article">
+                <img class="article__featuredImg" src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}">
+                <p class="article__time">{{post.data.date | postDate }}</p>
+                <h3 class="article__title">{{ post.data.title }}</h3>
+
+                <p class="article__excerpt">{{ post.data.description }}</p>
+                <button class="article__button"><a href="{{ post.url }}">Read More</a></button>
+</article>

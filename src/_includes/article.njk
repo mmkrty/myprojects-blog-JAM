@@ -1,0 +1,30 @@
+---
+layout: 'base.njk'
+---
+
+
+
+
+    <div class="container">
+
+        <article class="IndiArticle">
+            <img class="IndiArticle__featuredImg" src="{{ image }}" alt="{{ imageAlt }}">
+            <p class="IndiArticle__time">{{ date }}</p>
+            <h1 class="IndiArticle__title">{{ title }}</h1>
+
+            <div class="IndiArticle__content">
+                {{content | safe}}
+            </div>
+            
+
+        </article>
+
+
+
+
+
+
+    </div>
+
+
+
