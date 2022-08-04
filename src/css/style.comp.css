@@ -50,6 +50,7 @@ h3 {
   right: 0;
   transition: all 0.3s ease-in-out;
   z-index: 100;
+  background-color: #caf0f8;
 }
 .navbar .container {
   display: flex;
@@ -161,6 +162,7 @@ h3 {
 .section__articles .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .IndiArticle {
